@@ -1,0 +1,15 @@
+import spa.*
+import personas.*
+
+test "Olivia se da banio de vapor y su concentracion pasa a 9" {
+	spa.atender(olivia)
+	assert.equals(olivia.gradoDeConcentracion(),9)
+
+}
+
+test "Ramiro luego de dia de trabajo queda con piel grasosa"{
+	ramiro.diaDeTrabajo()
+	assert.that(ramiro.tienePielGrasosa())
+	spa.atender(ramiro)
+	assert.notThat(ramiro.tienePielGrasosa())
+}
